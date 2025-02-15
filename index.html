@@ -200,6 +200,35 @@
   }
 
 }
+.button-container {
+    display: flex;  /* Ensures buttons are in the same row */
+    justify-content: space-between;  /* Ensures they align evenly */
+    margin-top: 10px;
+}
+
+.contact-form button,
+.more-button {
+    flex: 1; /* Makes both buttons take equal space */
+    max-width: 48%; /* Keeps them from stretching too much */
+    text-align: center;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-form button:hover,
+.more-button:hover {
+    background: linear-gradient(90deg, #ff5722, #ff9800);
+    transform: scale(1.05);
+}
+
 
 
 
@@ -251,8 +280,12 @@
                   oninput="this.setCustomValidity('')"
                 ></textarea>
 
-                <button type="submit">Envoyer</button>
+              <div class="button-container">
+    <button type="submit">Envoyer</button>
+    <a href="more.html" class="more-button">En savoir plus</a>
+</div>
             </form>
+			
         </div>
     </div>
 </body>
